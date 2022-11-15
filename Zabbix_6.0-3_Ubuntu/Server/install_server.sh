@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Script by Riccardo Finotti.
+#Script by JuanMa Torrado.
 
 
 ############################
@@ -74,7 +74,7 @@ mysql -uroot -p$root_pass -e "GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'loca
 mysql -uroot -p$root_pass -e "FLUSH PRIVILEGES;"
 
 echo "Creating Zabbix's Database"
-
+#Possibly, /doc must be removed
 zcat /usr/share/doc/zabbix-sql-scripts/mysql/server.sql.gz | mysql -uzabbix -p$db_pass zabbix
 
 sleep 10
